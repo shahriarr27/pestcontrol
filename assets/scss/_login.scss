@@ -1,0 +1,90 @@
+
+
+.login{
+  overflow: hidden;
+  .row{
+    align-items: center;
+  }
+  .left-side{
+    text-align: center;
+    img{
+      width: 70%;
+    }
+  }
+  .right-side{
+    height: 100vh;
+    box-shadow: -10px 0px 30px rgba(0,0,0,0.1);
+    padding: 20px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form-title{
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .form-description{
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+  .form-control, .form-select {
+    padding: 13px 15px;
+    background: transparent;
+    border: solid 1px #ccc;
+    transition: all .3s ease;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    &:focus {
+      border-color: $secondary-color;
+      + {
+        label {
+          font-size: 13px;
+          top: -10px;
+          color: $secondary-color;
+          border-radius: 10px;
+        }
+      }
+    }
+    &:valid {
+      + {
+        label {
+          font-size: 11px;
+          top: -5px;
+        }
+      }
+    }
+  }
+  label {
+    position: absolute;
+    cursor: text;
+    z-index: 2;
+    top: 15px;
+    left: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    background: #fff;
+    padding: 0 10px;
+    color: $secondary-color;
+    transition: all .3s ease;
+  }
+  .loginBtn{
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    padding: 13px;
+    text-align: center;
+    background: $primary-color;
+    color: white;
+    border-radius: 5px;
+    &:hover{
+      background: darken($color: $primary-color, $amount: 10%);
+    }
+  }
+}
